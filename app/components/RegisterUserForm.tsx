@@ -17,9 +17,9 @@ export default function RegisterUserForm() {
     event.preventDefault();
     setIsLoading(true);
 
-    const { data, ok } = await registerUser(name, email, password, role);
+    const response = await registerUser(name, email, password, role);
 
-    if (ok && data) {
+    if (response.ok) {
       toast.success('Account created! You can now sign in.', { position: 'top-center', duration: 7000 });
       setName('');
       setEmail('');

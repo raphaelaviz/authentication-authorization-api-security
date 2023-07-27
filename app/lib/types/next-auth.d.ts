@@ -4,7 +4,8 @@ import { JWT, DefaultJWT } from 'next-auth/jwt'
 
 
 
-//Module Augmentation
+//Module Augmentation to include JWT in the interfaces.
+
 declare module 'next-auth'{
 
     interface Session {

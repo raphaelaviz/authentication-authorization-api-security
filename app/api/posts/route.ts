@@ -3,7 +3,10 @@ import prisma from "@/app/lib/prisma";
 import { NextResponse } from "next/server";
 
 
-//example of protected API endpoint
+
+// This hander isn't called inside the project. This is just an example of protected API endpoint
+// Test via Postman, Insomnia, etc.
+
 export async function GET (request: Request) {
 
     const accessToken= request.headers.get("accessToken")

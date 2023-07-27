@@ -11,6 +11,7 @@ const DEFAULT_SIGN_OPTIONS:SignOption={
 }
 
 
+// creates the JWT
 export function signJwtAccessToken (payload: JwtPayload, options: SignOption=DEFAULT_SIGN_OPTIONS){
 
     const secretKey = process.env.SECRET_KEY
@@ -20,6 +21,8 @@ export function signJwtAccessToken (payload: JwtPayload, options: SignOption=DEF
     return token
 
 }
+
+// verifies the token in the header of requests. Used to protected API endpoints.
 
 export function verifyJwt (token:string) {
     try {
