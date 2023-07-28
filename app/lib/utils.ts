@@ -1,6 +1,7 @@
 'use server'
 
 export async function registerUser(name: string, email: string, password: string, role: string) {
+  'use server'
     const response = await fetch(`${process.env.API_ENDPOINT}`, {
       method: 'POST',
       headers: {
