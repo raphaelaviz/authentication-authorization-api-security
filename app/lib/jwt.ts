@@ -7,7 +7,7 @@ interface SignOption {
 
 
 const DEFAULT_SIGN_OPTIONS:SignOption={
-    expiresIn: "6h"
+    expiresIn: "1h"
 }
 
 
